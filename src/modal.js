@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import "./modal.css";
@@ -21,6 +21,15 @@ function Modal({ closeModal }) {
       .oneOf([yup.ref("password"), null], "As senhas não são iguais"),
   });
 
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  function handleSubmit(){
+
+    const data = {email, senha}
+
+  }
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -40,6 +49,8 @@ function Modal({ closeModal }) {
                   name="email"
                   className="form-field"
                   placeHolder="Email"
+                  value={email}
+                  onchange = {e => setEmail(e.target.value)}
                 />
                 <ErrorMessage
                   component="span"
@@ -53,6 +64,8 @@ function Modal({ closeModal }) {
                   name="password"
                   className="form-field"
                   placeHolder="Senha"
+                  value={senha}
+                  onchange = {e => setSenha(e.target.value)}
                 />
                 <ErrorMessage
                   component="span"

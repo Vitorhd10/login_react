@@ -9,6 +9,7 @@ import {history} from './history'
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
+//rota privada
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
@@ -22,11 +23,18 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   />
 );
 
+//rota publica
+const PublicRoute = props => isAuthenticated()
+? <Redirect to="/"/>
+: <Route {...props}/>
+
+
+//rotas
 const Routes = () => (
   <BrowserRouter history={history}>
     <Switch>
       <PrivateRoute exact path="/" component={home} />
-      <Route exact path="/login" component={login} />
+      <PublicRoute exact path="/login" component={login} />
       <Route exact path="/public" component={Public} />
       <Route component={notFound} />
       <PrivateRoute path="/app" component={() => <h1>voce esta logado</h1>} />
