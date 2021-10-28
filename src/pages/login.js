@@ -6,6 +6,8 @@ import Modal from "../modal";
 import { STORAGE_KEY } from "./auth";
 import { history } from "../history";
 
+import axios from 'axios'
+
 
 
 function App() {
@@ -17,7 +19,10 @@ function App() {
 
   const [openModal, setOpenModal] = useState(false);
 
-  const handleClickLogin = (values) => console.log(values);
+  const handleClickLogin = (values) => {
+      axios.post('http//localhost:8080/v1/api/auth', values)
+      .then(resp => console.log(resp))
+  }
 
   const validationLogin = yup.object().shape({
     email: yup
@@ -60,7 +65,7 @@ function App() {
               className="form-error"
             />
           </div>
-          <button onClick={handleSignIn} className="button" >
+          <button onClick={handleSignIn} className="button" type="submit">
             Login
           </button>
           <div>

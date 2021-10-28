@@ -4,7 +4,7 @@ function notFound(){
     return(
         <div>
             <h1>
-                Not Found!!!!!
+                Essa pagina não existe amigão!!!!!
             </h1>
         </div>
     )

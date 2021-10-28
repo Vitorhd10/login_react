@@ -77,7 +77,7 @@ function Modal({ closeModal }) {
           </Formik>
         </div>
         <div className="footer">
-          <button onClick={() => closeModal(false)}>Cancelar</button>
+          <button className="cancelBtn" onClick={() => closeModal(false)}>Cancelar</button>
           <button>Confirmar</button>
         </div>
       </div>
