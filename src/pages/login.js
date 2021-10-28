@@ -3,8 +3,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import React, { useState } from "react";
 import Modal from "../modal";
+
 import { STORAGE_KEY } from "./auth";
 import { history } from "../history";
+import { login } from './auth'
 
 import axios from 'axios'
 
@@ -13,17 +15,14 @@ import axios from 'axios'
 function App() {
 
   const handleSignIn = () => {
-    localStorage.setItem(STORAGE_KEY, 'abc123')
+    login('abc123')
     history.push('/')
   }
 
   const [openModal, setOpenModal] = useState(false);
 
-  const handleClickLogin = (values) => {
-      axios.post('http//localhost:8080/v1/api/auth', values)
-      .then(resp => console.log(resp))
-  }
-
+  const handleClickLogin = (values) => console.log(values)
+      
   const validationLogin = yup.object().shape({
     email: yup
       .string()
