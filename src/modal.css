@@ -1,4 +1,5 @@
 .modalBackground {
+  color: black;
     width: 200px;
     height: 0px;
     background-color: rgba(244, 241, 255);
@@ -9,6 +10,7 @@
   }
   
   .modalContainer {
+    color: black;
     width: 500px;
     height: 500px;
     border-radius: 40px;
@@ -21,6 +23,7 @@
   }
   
   .modalContainer .title {
+    color: black;
     display: inline-block;
     text-align: center;
     margin-top: 50px;
@@ -39,6 +42,7 @@
   }
   
   .modalContainer .body {
+    color: black;
     margin-right: 50px;
     flex: 50%;
     display: flex;

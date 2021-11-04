@@ -1,29 +1,36 @@
 .container{
-  width: 300px;
-  height: max-content;
+  width: 350px;
+  height: 350px;
   margin: auto;
-  background-color: rgb(244, 241, 255);
+  background-color: rgb(235, 233, 236);
   padding: 20px 15px;
   margin-top: 120px;
   border-radius: 7px;
-  box-shadow: 6px 7px rgba(2, 7, 78, 0.7);
+  box-shadow: 7px 9px rgba(35, 0, 46, 0.7);
 }
 
 h1{
+  color:rgb(73, 1, 95);
   margin: 0;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .login-form{
+  margin-top: 35px;
   padding: 5px;
-  margin-left: 56px;
+  margin-left: 60px;
 }
 
 .form-field {
+  color:rgb(255, 231, 200);
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, .2);
   display: inline-block;
-  padding: 5px;
+  padding: 7px 30px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .form-error {
@@ -34,8 +41,25 @@ h1{
 }
 
 .button {
+  pointer-events: initial;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: rgb(98, 1, 143);
+  color: aliceblue;
+  border-radius: 6px;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 5px 10px;
+  padding: 6px 99px;
+  border: none;
+}
+
+.openModalBtn{
+  position: center;
+  font-family:Arial, Helvetica, sans-serif;
+  color: aliceblue;
+  background-color: rgb(11, 0, 22);
+  padding: 6px 75px;
+  border-radius: 6px;
+  border: none;
+
 }
 
